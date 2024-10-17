@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "eFinance Tab Opener",
+  "version": "1.0",
+  "description": "Automatically opens eFinance links in a new tab.",
+  "permissions": [
+    "tabs",
+    "activeTab"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.efinance.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
